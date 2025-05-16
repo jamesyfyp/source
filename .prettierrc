@@ -1,0 +1,23 @@
+{
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": false,
+  "semi": true,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "strict",    
+  "plugins": [
+    "prettier-plugin-tailwindcss"        
+  ],
+  "overrides": [
+    {
+      "files": "*.hbs",
+      "options": {
+        "parser": "glimmer"               
+      }
+    }
+  ]
+}

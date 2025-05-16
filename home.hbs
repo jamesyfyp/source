@@ -1,0 +1,58 @@
+{{!< default}} {{!-- The tag above means: insert everything in this file into the body of the default.hbs template --}}
+{{!-- {{> "components/header" }} --}}
+
+
+{{> "components/featured" showFeatured=@custom.show_featured_posts limit=4}}
+
+
+{{> "components/cta"}}
+<div 
+  class="h-m-screen"
+  id="hero-container"
+> 
+  <div class="hero bg-base-200 h-screen">
+    <div class="hero-content text-center">
+      <div 
+        class="max-w-lg p-4 bg-secondary/15 border-2 rounded-sm border-pink-100/25 space-y-4p-4 space-y-4"
+        id="hero-1"
+      >
+        <h1 class="text-5xl font-bold" id="chars-5">
+          Psst
+        </h1>
+        <div id="chars-0125">
+          You've found my blog! welcome to my little corner of the internet. I hope you enjoy your stay.
+        </div>
+        <button class="btn btn-primary"> Check Out Posts </button>
+      </div>
+    </div>
+  </div>
+  <div class="hero bg-base-200 h-screen">
+    <div class="hero-content text-center">
+      <div class="max-w-md" id="hero-2">
+        <h1 class="text-5xl font-bold">Hello there</h1>
+        <p class="py-6">
+          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+          quasi. In deleniti eaque aut repudiandae et a id nisi.
+        </p>
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+    </div>
+  </div>
+  <div class="hero bg-base-200 h-screen">
+    <div class="hero-content text-center">
+      <div class="max-w-md" id="hero-3">
+        <h1 class="text-5xl font-bold">Hello there</h1>
+        <p class="py-6">
+          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+          quasi. In deleniti eaque aut repudiandae et a id nisi.
+        </p>
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+
+  {{> "components/post-list" feed="home" postFeedStyle=@custom.post_feed_style showTitle=true
+  showSidebar=@custom.show_publication_info_sidebar}}
