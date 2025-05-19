@@ -94,3 +94,7 @@ production stylesheet in assets/built/screen.css
   --noise: 0;
 }
 
+/*for when you can not grok what is going on w/ layouts */
+/* * {
+  outline: 1px solid rgba(255, 0, 0, 0.2);
+} */

@@ -49,8 +49,12 @@
     {{ghost_head}}
 
 </head>
-<body class="{{body_class}} has-{{#match @custom.title_font "Elegant serif"}}serif{{else match @custom.title_font "Consistent mono"}}mono{{else}}sans{{/match}}-title has-{{#match @custom.body_font "Elegant serif"}}serif{{else}}sans{{/match}}-body">
-<div class="h-min-screen w-min-screen  ">
+<body class="min-h-screen max-w-screen bg-base-200 text-base-content">
+
+{{!-- Navigation - this is a custom helper that outputs the navigation based on the current context --}}
+{{!-- The navigation is output in the default template so it can be used in all templates --}}
+{{!-- The {{> "components/navigation"}} tag will be replaced with the contents of the components/navigation.hbs file --}}
+<div class="min-h-screen max-w-screen">
   {{> "components/navigation" navigationLayout=@custom.navigation_layout}}
   {{{body}}}
   {{> "components/footer"}}
