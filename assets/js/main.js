@@ -1,4 +1,5 @@
 /* Mobile menu burger toggle */
+
 // (function () {
 //     const navigation = document.querySelector('.gh-navigation');
 //     const burger = navigation.querySelector('.gh-burger');
@@ -16,15 +17,6 @@
 //         }
 //     });
 // })();
-
-
-
-/* Add lightbox to gallery images */
-(function () {
-    lightbox(
-        '.kg-image-card > .kg-image[width][height], .kg-gallery-image > img'
-    );
-})();
 
 /* Responsive video in post content */
 (function () {
