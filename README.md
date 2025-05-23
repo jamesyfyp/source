@@ -63,8 +63,3 @@ You can add your own SVG icons in the same manner.
 # Copyright & License
 
 Copyright (c) 2013-2025 Ghost Foundation - Released under the [MIT license](LICENSE).
-
-# Gsap Plugin set up
-  two steps
-    1. add the cdn script to the head on default.hbs
-    2. add the gsap.registerPlugin call on main.js
