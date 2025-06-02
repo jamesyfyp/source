@@ -1,144 +1,334 @@
-{{!< default}} {{!-- The tag above means: insert everything in this file into the body of the default.hbs template --}}
-{{!-- {{> "components/header" }} --}}
-
+{{!< default}}
+{{!-- The tag above means: insert everything in this file into the body of the default.hbs template --}}
 
 {{> "components/featured" showFeatured=@custom.show_featured_posts limit=4}}
 
-
 {{> "components/cta"}}
+
+
+<div id="floaters">
+  <!-- Floating Tech Logos -->
+  <div class="fixed inset-0 pointer-events-none z-10">
+  <div class="floating-logo absolute" id="rust-logo" style="top: 20%; left: 10%;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 2048 2048">
+    <path fill="currentColor" d="M2048 1024q0 17-14 25l-87 54q-1 6-1 12t-1 12l75 70q9 8 9 21q0 8-5 16t-14 12l-96 35q-2 6-3 11t-4 12q4 6 15 19t22 29t19 30t9 22q0 11-6 19t-18 11l-102 16q-2 5-5 10t-6 11l11 22q7 14 15 31t13 30t6 23q0 13-8 21t-20 8h-2l-103-4l-15 18q2 10 6 24t9 30t7 30t3 23q0 12-9 21t-21 9q-7 0-21-3t-31-7t-32-9t-23-6l-18 15l4 103v2q0 12-8 20t-21 8q-8 0-22-5t-31-13t-30-15t-23-12l-10 6q-5 3-11 5l-16 102q-2 11-10 17t-19 7q-8 0-22-8t-30-20t-29-21t-20-16q-6 2-11 3t-12 4l-35 96q-3 8-11 13t-17 6q-14 0-21-9l-70-75q-6 1-12 1t-12 1l-54 87q-8 14-25 14t-25-14l-54-87q-6-1-12-1t-12-1l-70 75q-8 9-21 9q-8 0-16-5t-12-14l-35-96q-6-2-11-3t-12-4q-6 5-19 15t-29 22t-30 19t-22 9q-11 0-19-6t-11-18l-16-102q-5-2-10-5t-11-6l-22 11q-14 7-31 15t-30 13t-23 6q-13 0-21-8t-8-20v-2l4-103l-18-15q-10 2-24 6t-30 9t-30 7t-23 3q-12 0-21-9t-9-21q0-7 3-21t7-31t9-32t6-23l-15-18l-103 4h-2q-12 0-20-8t-8-21q0-8 5-22t13-31t15-30t12-23l-6-10q-3-5-5-11l-102-16q-11-2-17-10t-7-20q0-7 8-21t20-30t21-29t16-20q-2-6-3-11t-4-12l-96-35q-8-3-13-11t-6-17q0-13 9-21l75-70q-1-6-1-12t-1-12l-87-54q-14-8-14-25t14-25l87-54q1-6 1-12t1-12l-75-70q-9-7-9-21q0-8 5-16t14-12l96-35q2-6 3-11t4-12q-5-6-15-19t-22-29t-19-30t-9-22q0-11 6-19t18-11l102-16q2-5 5-10t6-11l-11-22q-7-14-15-31t-13-30t-6-23q0-12 8-20t20-9h2l103 4l15-18q-2-10-6-24t-9-30t-7-30t-3-23q0-12 9-21t21-9q7 0 21 3t31 7t32 9t23 6l18-15l-4-103v-2q0-12 8-20t21-8q8 0 22 5t31 13t30 15t23 12l10-6q5-3 11-5l16-102q2-11 10-17t20-7q7 0 21 8t30 20t29 22t20 15q5-2 11-3t12-4l35-96q3-8 11-13t17-6q13 0 21 9l70 75q6-1 12-1t12-1l54-87q8-14 25-14t25 14l54 87q6 1 12 1t12 1l70-75q7-9 21-9q8 0 16 5t12 14l35 96q6 2 11 3t12 4q6-4 19-15t29-22t30-19t23-9q10 0 18 6t11 18l16 102q5 2 10 5t11 6l22-11q14-7 31-15t30-13t23-6q12 0 20 8t9 20v2l-4 103l18 15q10-2 24-6t30-9t30-7t23-3q12 0 21 9t9 21q0 7-3 21t-7 31t-9 32t-6 23l15 18l103-4h2q12 0 20 8t8 21q0 8-5 22t-13 31t-15 30t-12 23l6 10q3 5 5 11l102 16q11 2 17 10t7 20q0 8-8 22t-20 29t-22 29t-15 20q2 6 3 11t4 12l96 35q8 3 13 11t6 17q0 14-9 21l-75 70q1 6 1 12t1 12l87 54q14 8 14 25zm-489 519q36-36 69-80h-316q-18 0-35-11t-32-27t-26-34t-16-34q-12-34-18-79t-20-87t-40-69t-77-29H854v138h179q4 0 8 1t4 6v217q0 5-4 6t-8 2H420q15 20 31 39t34 37q12-3 31-7t39-9t38-8t30-4q20 0 34 12t20 32l31 143q151 70 316 70q161 0 309-67l31-143q5-20 20-32t35-12q11 0 30 3t39 9t39 9t32 8zm-26 110q0-26-17-43t-44-18q-25 0-43 18t-18 43q0 26 17 43t44 18q26 0 43-17t18-44zm-963 59q26 0 43-18t17-44q0-26-17-43t-43-17q-25 0-43 17t-18 43q0 26 17 44t44 18zM294 731q-25 0-43 18t-18 43q0 25 18 43t43 18q26 0 43-17t18-44q0-26-17-43t-44-18zm-16 206q-2 20-3 40t-1 40q0 104 29 206h214V744H411q8 17 20 40t12 44q0 17-9 30t-24 20l-132 59zm576-47h235q15 0 34-3t36-10t28-20t12-33q0-16-9-30t-22-24t-30-15t-31-6H854v141zm918 183q1-14 1-28t1-29q0-18-1-36t-3-37l-138-61q-15-7-24-21t-9-30q0-10 10-35t23-55t26-56t18-39q-41-72-96-132t-121-107t-141-79t-156-48l-105 100q-18 16-38 16q-25 0-40-17l-94-99q-121 23-229 84T465 517h796q49 0 99 19t90 54t65 80t25 98q0 36-13 67t-36 57t-49 49t-56 40q33 26 52 46t32 41t20 49t18 69q3 11 12 18t20 13t24 7t22 3q50 0 74-29t24-77v-9q0-6-1-13q0-10 2-18t10-8h77zM960 241q0 25 18 43t43 18q25 0 43-18t18-43q0-26-17-43t-44-18q-26 0-43 17t-18 44zm787 615q26 0 43-17t18-44q0-26-17-43t-44-18q-25 0-43 18t-18 43q0 25 18 43t43 18z"/>
+  </svg>
+</div>
+
+  <div class="floating-logo absolute" id="js-logo" style="top: 15%; right: 15%;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="125" height="125" viewBox="0 0 128 128">
+      <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"/><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981c-3.832-1.761-8.104-3.022-9.377-5.926c-.452-1.69-.512-2.642-.226-3.665c.821-3.32 4.784-4.355 7.925-3.403c2.023.678 3.938 2.237 5.093 4.724c5.402-3.498 5.391-3.475 9.163-5.879c-1.381-2.141-2.118-3.129-3.022-4.045c-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235c-5.926 6.724-4.236 18.492 2.975 23.335c7.104 5.332 17.54 6.545 18.873 11.531c1.297 6.104-4.486 8.08-10.234 7.378c-4.236-.881-6.592-3.034-9.139-6.949c-4.688 2.713-4.688 2.713-9.508 5.485c1.143 2.499 2.344 3.63 4.26 5.795c9.068 9.198 31.76 8.746 35.83-5.176c.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149c-1.713 3.558-6.152 3.117-8.175 2.427c-2.059-1.012-3.106-2.451-4.319-4.485c-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901c4.462 2.678 10.459 3.499 16.731 2.059c4.082-1.189 7.604-3.652 9.448-7.401c2.666-4.915 2.094-10.864 2.07-17.444c.06-10.735.001-21.468.001-32.237z"/>
+    </svg>
+  </div>
+
+  <div class="floating-logo absolute" id="python-logo" style="top: 60%; left: 5%;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="123" height="123" viewBox="0 0 256 255" fill="#000000">
+      <defs>
+        <linearGradient id="logosPython0" x1="12.959%" x2="79.639%" y1="12.039%" y2="78.201%">
+          <stop offset="0%" stop-color="#387EB8"/>
+          <stop offset="100%" stop-color="#366994"/>
+            </linearGradient>
+              <linearGradient id="logosPython1" x1="19.128%" x2="90.742%" y1="20.579%" y2="88.429%">
+                <stop offset="0%" stop-color="#FFE052"/>
+                <stop offset="100%" stop-color="#FFC331"/>
+            </linearGradient>
+          </defs>
+        <path fill="blue" d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072ZM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.13Z"/>
+        <path fill="yellow" d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897Zm34.114-19.586a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.131a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13Z"/></svg>
+  </div>
+
+  <div class="floating-logo absolute" id="css-logo" style="top: 50%; right: 10%;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 256 361"><path fill="#264DE4" d="M127.844 360.088L23.662 331.166L.445 70.766h255.11l-23.241 260.36l-104.47 28.962Z"/><path fill="#2965F1" d="m212.417 314.547l19.86-222.49H128V337.95l84.417-23.403Z"/><path fill="#EBEBEB" d="m53.669 188.636l2.862 31.937H128v-31.937H53.669Zm-5.752-64.641l2.903 31.937H128v-31.937H47.917ZM128 271.58l-.14.037l-35.568-9.604l-2.274-25.471h-32.06l4.474 50.146l65.421 18.16l.147-.04V271.58Z"/><path d="M60.484 0h38.68v16.176H76.66v16.176h22.506v16.175H60.484V0Zm46.417 0h38.681v14.066h-22.505v2.813h22.505v32.352h-38.68V34.46h22.505v-2.813H106.9V0Zm46.418 0H192v14.066h-22.505v2.813H192v32.352h-38.681V34.46h22.505v-2.813H153.32V0Z"/><path fill="#FFF" d="m202.127 188.636l5.765-64.641H127.89v31.937h45.002l-2.906 32.704H127.89v31.937h39.327l-3.708 41.42l-35.62 9.614v33.226l65.473-18.145l.48-5.396l7.506-84.08l.779-8.576Z"/></svg>
+  </div>
+
+  <div class="floating-logo absolute" id="html-logo" style="top: 30%; right: 5%;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 256 256"><g fill="none"><rect width="256" height="256" fill="#E14E1D" rx="60"/><path fill="#fff" d="m48 38l8.61 96.593h110.71l-3.715 41.43l-35.646 9.638l-35.579-9.624l-2.379-26.602H57.94l4.585 51.281l65.427 18.172l65.51-18.172l8.783-98.061H85.824l-2.923-32.71h122.238L208 38H48Z"/><path fill="#EBEBEB" d="M128 38H48l8.61 96.593H128v-31.938H85.824l-2.923-32.71H128V38Zm0 147.647l-.041.014l-35.579-9.624l-2.379-26.602H57.94l4.585 51.281l65.427 18.172l.049-.014v-33.227Z"/></g></svg>
+  </div>
+
+  <div class="floating-logo absolute" id="tailwind-logo" style="top: 70%; right: 1%;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="#60a5fa"><path fill="#60a5fa" d="M12 6c-2.67 0-4.33 1.33-5 4c1-1.33 2.17-1.83 3.5-1.5c.76.19 1.31.74 1.91 1.35c.98 1 2.09 2.15 4.59 2.15c2.67 0 4.33-1.33 5-4c-1 1.33-2.17 1.83-3.5 1.5c-.76-.19-1.3-.74-1.91-1.35C15.61 7.15 14.5 6 12 6m-5 6c-2.67 0-4.33 1.33-5 4c1-1.33 2.17-1.83 3.5-1.5c.76.19 1.3.74 1.91 1.35C8.39 16.85 9.5 18 12 18c2.67 0 4.33-1.33 5-4c-1 1.33-2.17 1.83-3.5 1.5c-.76-.19-1.3-.74-1.91-1.35C10.61 13.15 9.5 12 7 12Z"/></svg>
+  </div>
+
+  <div class="floating-logo absolute" id="react-logo" style="top: 35%; left: 10%;">
+   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 256 256"><g fill="none"><rect width="256" height="256" fill="#242938" rx="60"/><path fill="#00D8FF" d="M128.001 146.951c10.304 0 18.656-8.353 18.656-18.656c0-10.303-8.352-18.656-18.656-18.656c-10.303 0-18.656 8.353-18.656 18.656c0 10.303 8.353 18.656 18.656 18.656Z"/><path stroke="#00D8FF" stroke-width="8.911" d="M128.002 90.363c25.048 0 48.317 3.594 65.862 9.635C215.003 107.275 228 118.306 228 128.295c0 10.409-13.774 22.128-36.475 29.649c-17.162 5.686-39.746 8.654-63.523 8.654c-24.378 0-47.463-2.786-64.819-8.717C41.225 150.376 28 138.506 28 128.295c0-9.908 12.41-20.854 33.252-28.12c17.61-6.14 41.453-9.812 66.746-9.812h.004Z" clip-rule="evenodd"/><path stroke="#00D8FF" stroke-width="8.911" d="M94.981 109.438c12.514-21.698 27.251-40.06 41.249-52.24c16.864-14.677 32.914-20.425 41.566-15.436c9.017 5.2 12.288 22.988 7.463 46.41c-3.645 17.707-12.359 38.753-24.238 59.351c-12.179 21.118-26.124 39.724-39.931 51.792c-17.471 15.272-34.362 20.799-43.207 15.698c-8.583-4.946-11.865-21.167-7.747-42.852c3.479-18.323 12.21-40.812 24.841-62.723h.004Z" clip-rule="evenodd"/><path stroke="#00D8FF" stroke-width="8.911" d="M95.012 147.578c-12.549-21.674-21.093-43.616-24.659-61.826c-4.293-21.941-1.258-38.716 7.387-43.72c9.009-5.216 26.052.834 43.934 16.712c13.52 12.004 27.403 30.061 39.316 50.639c12.214 21.098 21.368 42.473 24.929 60.461c4.506 22.764.859 40.157-7.978 45.272c-8.574 4.964-24.265-.291-40.996-14.689c-14.136-12.164-29.26-30.959-41.933-52.849Z" clip-rule="evenodd"/></g></svg>
+  </div>
+
+  <div class="floating-logo absolute" id="ts-logo" style="bottom: 10%; left: 15%;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 256 256"><g fill="none"><rect width="256" height="256" fill="#007ACC" rx="60"/><path fill="#fff" d="m56.611 128.849l-.081 10.484h33.32v94.679h23.57v-94.679h33.32v-10.281c0-5.689-.121-10.443-.284-10.565c-.122-.162-20.399-.244-44.983-.203l-44.739.122l-.122 10.443Zm149.956-10.741c6.501 1.626 11.459 4.511 16.01 9.224c2.357 2.52 5.851 7.112 6.136 8.209c.081.325-11.053 7.802-17.798 11.987c-.244.163-1.22-.894-2.317-2.519c-3.291-4.795-6.745-6.868-12.028-7.233c-7.761-.529-12.759 3.535-12.718 10.321c0 1.991.284 3.169 1.097 4.795c1.706 3.535 4.876 5.648 14.832 9.955c18.326 7.884 26.168 13.085 31.045 20.48c5.445 8.249 6.664 21.415 2.966 31.208c-4.063 10.646-14.141 17.879-28.323 20.277c-4.388.772-14.791.65-19.504-.203c-10.281-1.829-20.033-6.908-26.047-13.572c-2.357-2.601-6.949-9.387-6.664-9.875c.121-.162 1.178-.812 2.356-1.503c1.138-.65 5.446-3.129 9.509-5.486l7.355-4.267l1.544 2.276c2.154 3.291 6.867 7.802 9.712 9.305c8.167 4.308 19.383 3.698 24.909-1.259c2.357-2.154 3.332-4.389 3.332-7.68c0-2.967-.366-4.267-1.91-6.502c-1.991-2.844-6.054-5.242-17.595-10.24c-13.206-5.689-18.895-9.224-24.096-14.832c-3.007-3.25-5.852-8.452-7.03-12.8c-.975-3.616-1.219-12.678-.447-16.335c2.722-12.759 12.353-21.658 26.25-24.3c4.511-.853 14.994-.528 19.424.569Z"/></g></svg>
+  </div>
+   <!-- Additional floating elements -->
+  <div class="floating-logo absolute" id="dot-1" style="top: 45%; left: 20%;">
+      <div class="w-4 h-4 bg-primary rounded-full opacity-60"></div>
+    </div>
+    <div class="floating-logo absolute" id="dot-2" style="top: 25%; left: 70%;">
+      <div class="w-6 h-6 bg-secondary rounded-full opacity-40"></div>
+    </div>
+    <div class="floating-logo absolute" id="dot-3" style="top: 80%; left: 60%;">
+      <div class="w-3 h-3 bg-accent rounded-full opacity-50"></div>
+    </div>
+  </div>
+</div>
+
+ 
+
 <div 
-  class=""
+  class="break-words whitespace-normal"
   id="hero-container"
 > 
-  <div class="hero bg-base-200 h-screen">
+  <div class="hero bg-gradient-to-br from-primary/20 to-secondary/20 h-screen relative">
     <div class="hero-content text-center">
       <div 
-        class="max-w-lg p-4 bg-secondary/15 border-2 rounded-sm border-pink-100/25 space-y-4p-4 space-y-4"
+        class="max-w-2xl p-8 bg-base-100/90 backdrop-blur-sm border-2 rounded-lg border-primary/25 space-y-6"
         id="hero-1"
       >
-        <h1 class="text-5xl font-bold" id="chars-5">
-          Psst
+        <h1 class="text-6xl font-bold text-primary" id="words-3">
+          Hey there! 👋
         </h1>
-        <div id="chars-0125">
-          You've found my blog! welcome to my little corner of the internet. I hope you enjoy your stay.
+        <div class="text-lg leading-relaxed text-wrap" id="words-015">
+          Welcome to my digital playground! I'm a passionate developer who loves crafting elegant solutions with Rust, JavaScript, Python, CSS, and HTML. This is where I share my journey, insights, and coding adventures.
         </div>
-        <button class="btn btn-primary"> Check Out Posts </button>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#posts" class="btn btn-primary btn-lg"> 
+            Explore My Posts 
+          </a>
+          <a href="https://github.com/jamesyfyp" class="btn btn-outline btn-lg">
+            Visit My GitHub
+          </a>
+        </div>
       </div>
     </div>
   </div>
+  
   <div class="hero bg-base-200 h-screen">
     <div class="hero-content text-center">
       <div class="max-w-md" id="hero-2">
-        <h1 class="text-5xl font-bold">Hello there</h1>
-        <p class="py-6">
-          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-          quasi. In deleniti eaque aut repudiandae et a id nisi.
+        <h1 class="text-5xl font-bold" id="words-4">What I Do</h1>
+        <p class="py-6" id="words-02">
+          I build robust backend systems with Rust, create dynamic web experiences with JavaScript, 
+          analyze data with Python, and craft beautiful interfaces with modern CSS and HTML. 
+          Each project is a new adventure in problem-solving. I am always eager to learn and grow and am constanlty looking to cut my teeth 
+          on new technologies and frameworks.
         </p>
-        <button class="btn btn-primary">Get Started</button>
+        <a class="btn btn-primary" href="/about">Read My Story</a>
       </div>
     </div>
   </div>
-  <div class="hero bg-base-200 h-screen">
+  
+  <div class="hero bg-gradient-to-br from-secondary/20 to-accent/20 h-screen">
     <div class="hero-content text-center">
       <div class="max-w-md" id="hero-3">
-        <h1 class="text-5xl font-bold">Hello there</h1>
-        <p class="py-6">
-          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-          quasi. In deleniti eaque aut repudiandae et a id nisi.
+        <h1 class="text-5xl font-bold" id="words-25">Let's Connect</h1>
+        <p class="py-6" id="words-025">
+          Whether you're here to learn, collaborate, or just say hello, I'd love to hear from you. 
+          Drop me a line and let's build something amazing together!
         </p>
-        <button class="btn btn-primary">Get Started</button>
+       <a href="https://www.linkedin.com/in/james-phillips-923878223/" class="btn btn-primary">
+        Get In Touch
+      </a>
       </div>
     </div>
   </div>
 </div> 
 
+{{> "components/post-list" feed="home" postFeedStyle=@custom.post_feed_style showTitle=true
+showSidebar=@custom.show_publication_info_sidebar}}
 
-
-  {{> "components/post-list" feed="home" postFeedStyle=@custom.post_feed_style showTitle=true
-  showSidebar=@custom.show_publication_info_sidebar}}
 <script>
+  //disable the floaters on mobile
+  if (window.innerWidth < 768) {
+    document.querySelectorAll('#floaters').forEach(el => el.style.display = 'none');
+  }
   document.addEventListener('DOMContentLoaded', function () {
-    // register gspa plugins here
+    // register gsap plugins here
     gsap.registerPlugin(SplitText);
     gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin) 
 
-  /* 
-    text split animations: naming convention is type-<chars|words|lines>-<staggerDurration> for id's
-    if more nuance is needed, add the object key / value pair to the string ID for reusablity
-  */
-  let split5 = SplitText.create('#chars-5', {
-    type: 'chars',
-  })
+    /* 
+      text split animations: naming convention is type-<words|words|lines>-<staggerDuration> for id's
+      if more nuance is needed, add the object key / value pair to the string ID for reusability
+    */
+    
+    // Hero 1 animations
+    let split3 = SplitText.create('#words-3', {
+      type: 'words',
+    })
 
-  gsap.from(split5.chars, { 
-    y: 100,
-    opacity: 0,
-    autoAlpha: 0,
-    stagger: .5,
-  })
+    gsap.from(split3.words, { 
+      y: 100,
+      opacity: 0,
+      autoAlpha: 0,
+      stagger: .3,
+      delay: 0.5
+    })
 
-  let split0125 = SplitText.create('#chars-0125', {
-    type: 'chars',
-  })
+    let split015 = SplitText.create('#words-015', {
+      type: 'words',
+    })
 
-  gsap.from(split0125.chars, { 
-    y: 100,
-    opacity: 0,
-    autoAlpha: 0,
-    stagger: .0125,
-  })
+    gsap.from(split015.words, { 
+      y: 50,
+      opacity: 0,
+      autoAlpha: 0,
+      stagger: .015,
+      delay: 1.5
+    })
 
-  //animations for lp hero sections
-  gsap.set("#hero-1", { 
-    opacity: 0, 
-    y: 100
-  });
+    // Hero 2 animations
+    let split4 = SplitText.create('#words-4', {
+      type: 'words',
+    })
 
-  gsap.to("#hero-1", { 
-    scrollTrigger: {
-      trigger: "#hero-1",
-      toggleActions: "restart pause reverse pause",
-      marker: true,
-    },
-    duration: 2,
-    opacity: 1,
-    y: -100,
-    ease: "power2.inOut" 
-  });
+    let words02 = SplitText.create('#words-02', {
+      type: 'words',
+    })
 
-  gsap.set("#hero-2", { opacity: 0 });
+    // Hero 3 animations
+    let split25 = SplitText.create('#words-25', {
+      type: 'words',
+    })
 
-  gsap.to("#hero-2", { 
-    scrollTrigger: {
-      trigger: "#hero-2",
-      toggleActions: "restart pause reverse pause",
-      start: "center ",
-      marker: true,
-    },
-    duration: 2,
-    opacity: 1,
-    ease: "power2.inOut" 
-  });
+    let words025 = SplitText.create('#words-025', {
+      type: 'words',
+    })
 
-  gsap.set("#hero-3", { opacity: 0 });
+    // Floating logo animations
+    function createFloatingAnimation(element, duration, xRange, yRange) {
+      gsap.to(element, {
+        x: `+=${Math.random() * xRange - xRange/2}`,
+        y: `+=${Math.random() * yRange - yRange/2}`,
+        rotation: Math.random() * 360,
+        duration: duration,
+        repeat: -1,
+        yoyo: true,
+        ease: "power2.inOut"
+      });
+    }
 
-  gsap.to("#hero-3", { 
-    scrollTrigger: {
+    // Initialize floating animations
+    createFloatingAnimation('#rust-logo', 8, 100, 80);
+    createFloatingAnimation('#js-logo', 6, 120, 90);
+    createFloatingAnimation('#python-logo', 10, 80, 100);
+    createFloatingAnimation('#css-logo', 7, 110, 85);
+    createFloatingAnimation('#html-logo', 9, 90, 95);
+    createFloatingAnimation('#tailwind-logo', 10, 90, 95);
+    createFloatingAnimation('#react-logo', 9, 90, 95);
+    createFloatingAnimation('#ts-logo', 9, 90, 95);
+    createFloatingAnimation('#dot-1', 5, 60, 60);
+    createFloatingAnimation('#dot-2', 7, 80, 70);
+    createFloatingAnimation('#dot-3', 6, 70, 80);
+
+    // Hero section scroll animations
+    gsap.set("#hero-1", { 
+  opacity: 0, 
+  y: 100
+});
+
+gsap.to("#hero-1", { 
+  scrollTrigger: {
+    trigger: "#hero-1",
+    start: "top 80%",
+    // This ensures the animation only plays once and stays in the final state
+    toggleActions: "play none none none",
+    // Once is true means the animation only happens one time
+    once: true
+  },
+  duration: 2,
+  opacity: 1,
+  y: 0,
+  ease: "power2.inOut" 
+});
+
+gsap.set("#hero-2", { opacity: 0, x: -100 });
+
+gsap.to("#hero-2", { 
+  scrollTrigger: {
+    trigger: "#hero-2",
+    start: "top 80%",
+    toggleActions: "play none none none",
+    once: true,
+    onEnter: () => {
+      gsap.from(split4.words, { 
+        y: 50,
+        opacity: 0,
+        stagger: .4,
+        duration: 1
+      });
+      gsap.from(words02.words, { 
+        y: 20,
+        opacity: 0,
+        stagger: .02,
+        delay: 0.5,
+        duration: 0.8
+      });
+    }
+  },
+  duration: 1.5,
+  opacity: 1,
+  x: 0,
+  ease: "power2.inOut" 
+});
+
+gsap.set("#hero-3", { opacity: 0, x: 100 });
+
+gsap.to("#hero-3", { 
+  scrollTrigger: {
+    trigger: "#hero-3",
+    start: "top 80%",
+    toggleActions: "play none none none",
+    once: true,
+    onEnter: () => {
+      gsap.from(split25.words, { 
+        y: 50,
+        opacity: 0,
+        stagger: .25,
+        duration: 1
+      });
+      gsap.from(words025.words, { 
+        y: 20,
+        opacity: 0,
+        stagger: .025,
+        delay: 0.5,
+        duration: 0.8
+      });
+    }
+  },
+  duration: 1.5,
+  opacity: 1,
+  x: 0,
+  ease: "power2.inOut" 
+});
+
+    // Add hover effects for floating logos
+    document.querySelectorAll('.floating-logo svg').forEach(logo => {
+      logo.addEventListener('mouseenter', () => {
+        gsap.to(logo, { scale: 1.2, duration: 0.3 });
+      });
+      
+      logo.addEventListener('mouseleave', () => {
+        gsap.to(logo, { scale: 1, duration: 0.3 });
+      });
+    });
+
+    ScrollTrigger.create({
       trigger: "#hero-container",
-      toggleActions: "restart pause reverse pause",
-      start: "bottom bottom",
-      marker: true,
-    },
-    duration: 2,
-    opacity: 1,
-    ease: "power2.inOut" 
+      start: "top top",
+    })
   });
 
-
-
-  ScrollTrigger.create({
-    trigger: "#hero-container",
-    start: "top top",
-  })
+  document.querySelector('a[href="#posts"]').addEventListener('click', function (e) {
+    e.preventDefault();
+    gsap.to(window, { duration: 1.5, scrollTo: "#posts" })
   });
 </script>
+
+<style>
+  .floating-logo {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    pointer-events: auto;
+  }
+  .floating-logo:hover {
+    opacity: 1;
+  }
+</style>
