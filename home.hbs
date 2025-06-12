@@ -68,13 +68,10 @@
     </div>
   </div>
 </div>
-
- 
-
 <div 
   class="break-words whitespace-normal"
   id="hero-container"
-> 
+>
   <div class="hero bg-gradient-to-br from-primary/20 to-secondary/20 h-screen relative">
     <div class="hero-content text-center">
       <div 
@@ -321,6 +318,13 @@ gsap.to("#hero-3", {
     gsap.to(window, { duration: 1.5, scrollTo: "#posts" })
   });
 </script>
+
+<script type="module">
+  import init from "{{asset 'wasm/leptosBevyIsland.js'}}";
+  console.log("Initializing Bevy Leptos Game...");
+  debugger
+  init();
+</script> 
 
 <style>
   .floating-logo {
